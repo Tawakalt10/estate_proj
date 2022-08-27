@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 8rem;
+    height: 100%;
+    background-color: #eee;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    align-items: center;
+    z-index:10 ;
+
+}
+
+.menu-icon {
+    margin-top: 3rem;
+    cursor: pointer;
+   
+}
+
+.line {
+    height: 0.2rem; 
+    width: 2.5rem;
+    background-color: #222;
+    margin-bottom: .6rem;
+}
+
+.line-1, .line-3 {
+    width: 1.8rem;
+    transition: all .4s;
+}
+
+.menu-icon:hover .line {
+    width: 2.5rem;
+}
+
+.social-icons-list {
+    list-style: none;
+    padding: 0;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: #777;
+    transition: color .3s ;
+}
+
+.social-link:hover {
+    color: #deaa86;
+}
+
+.year {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color:#555;
+}
+
+/* navigation */
+.navigation {
+    position: fixed;
+    left: -32rem;
+    width: 40rem;
+    height: 100%;
+    background: linear-gradient(to top, rgba(34, 32, 41, 1), rgba(34, 32, 41, .8))  
+               ,url(../images/navimg.jpg) center no-repeat;  
+    /* the .. above here is because styles is under a folder too , the liner gradient is to make the image darker*/
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between ;
+    align-items: center;
+    z-index: 5;
+    transition: left .8s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-heading {
+    font-family:'Josefin Sans', sans-serif ;
+    font-size:3.5rem ;
+    font-weight: 300;
+    letter-spacing: .2rem ;
+    color: #deaa86;
+    text-align: center;
+}
+
+.navigation-search {
+    position: relative;
+}
+
+.navigation-search-input{
+    width: 30rem;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,.3);
+    font-family:'Josefin Sans', sans-serif ;
+    font-size: 1.6rem;
+    color: #deaa86;
+    letter-spacing: .1rem;
+    outline: none;
+    border: .1rem solid #555;
+    border-radius: 10rem;
+    transition: background-color .3s;
+}
+
+.navigation-heading {
+    font-family:'Josefin Sans', sans-serif ;
+    font-size:3.5rem ;
+    font-weight: 300;
+    letter-spacing: .2rem ;
+    color: #deaa86;
+    text-align: center;
+}
+
+.navigation-search {
+    position: relative;
+}
+
+.navigation-search-input{
+    width: 30rem;
+    padding: 1rem 2rem;
+    background-color: rgba(0,0,0,.3);
+    font-family:'Josefin Sans', sans-serif ;
+    font-size: 1.6rem;
+    color: #deaa86;
+    letter-spacing: .1rem;
+    outline: none;
+    border: .1rem solid #555;
+    border-radius: 10rem;
+    transition: background-color .3s;
+}
+
+.navigation-search-input:focus  {
+    background-color: rgba(0,0,0,.1);
+}
+
+.navigation-search-btn {
+    border: none;
+    background-color: transparent;
+    color:#deaa86 ;
+    font-size: 1.7rem;
+    position: absolute;
+    right: 2.9rem;
+    padding-top: 1.4rem;
+    cursor: pointer;
+
+}
+
+.navigation-search-btn:focus {
+    outline: none;
+}
+
+.navigation-list {
+    list-style: none;
+    padding: 0;
+    /* ul elements automatically has it own padding so we gave it the 0 */
+    height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation-item {
+    position: relative;
+}
+
+.navigation-link {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color .5s;
+
+}
+
+.navigation-link::before {
+    content: "";
+    width: 0rem;
+    height: .1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    left: -4rem;
+    transition: width .5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navigation-link::after {
+    content: "";
+    width: 0rem;
+    height: .1rem;
+    background-color: #deaa86;
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    transition: width .5s cubic-bezier(1,0,0,1) ;
+}
+
+.navigation-link:hover {
+    color: #deaa86;
+}
+
+
+.navigation-link:hover::before,
+.navigation-link:hover::after {
+    width: 3rem;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.checkbox:checked ~ .navigation {
+    left: 8rem;
+
+}
+
+.header {
+    margin-left: 8rem;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.5)) , url(../images/background.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.banner {
+    color: white;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+     
+}
+
+.banner-heading {
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 0;
+    animation: anim 3s;
+}
+
+.banner-paragraph {
+    font-size: 2.5rem;
+    font-weight: 300;
+    animation: anim 1.9s .7s backwards;
+}
+
+.banner-button {
+    width: 14rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 3rem;
+    color: rgb(204, 199, 199);
+    border: none;
+    letter-spacing: .1rem;
+    border-radius: 10rem;
+    outline: none;
+    background: linear-gradient(to right, blue, navy );
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 200;
+    animation: anim 1.9s .7s backwards;
+}
+
+.banner-button:hover{
+    background: linear-gradient(to left, gold,  goldenrod);
+}
+
+.banner-button:active{
+    transform:translateY(.3rem) ;
+}
+
+@keyframes anim {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.about-us {
+    margin-left: 8rem;
+    display: flex;
+    background-color: #ddd;
+
+}
+
+.about-us-content {
+    flex: 0 1 50%;   /* flex grow,basis and shrink*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem;
+    box-sizing: border-box;
+    
+}
+
+.about-us-heading {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #555;
+}
+
+
+.sub-heading {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: #deaa86;
+}
+    
+
+.about-us-paragraph {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 7rem;
+}
+.about-us-button {
+    width: 15rem;
+    padding: .7rem .5rem ;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-arrow {
+    margin-left: .5rem;
+}
+
+.about-us-button:hover .btn-arrow {
+    margin-left: 1.5rem;
+    transition: margin-left .4s;
+
+}
+
+.small-underline {
+    width:9rem ;
+    margin: 0 auto 1rem auto;
+    height: .1rem;
+    background-color: #deaa86;
+}
+
+.big-underline {
+    width: 20rem;
+    height: .1rem;
+    margin: auto;
+    background-color: #deaa86;
+}
+
+.about-us-images {
+    flex: 1;
+    position: relative;
+}
+
+
+.image {
+    width: 32rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,.4);
+    border-radius: .4rem;
+    border: .2rem soid #b85d1c;
+
+}
+
+.image-1 {
+    transform: translate(-50%, -50%);
+}
+
+.houses {
+    margin-left: 8rem;
+}
+
+.common-header {
+    padding: 5rem;
+    text-align: center;
+    color: #b85d1c;
+}
+
+.common-heading {
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+}
+
+
+.house-card {
+    width: 30rem;
+    margin: 5rem;
+    background-color: #15141b;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,.3);
+
+}
+.house-img {
+    width: 100%;
+}
+
+.house-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.house-card-content {
+    color: #ddd;
+    padding: 2rem;
+}
+
+.house-card-heading {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 300;
+}
+.house-card-paragraph {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.house-price {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: right; 
+    margin: 0;
+}
+
+.house-card-btn{
+    width: 15rem;
+    padding: 1.5rem 1rem ;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #b85d1c;
+    background-color: transparent;
+    border: .1rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10rem;
+
+}
+
+.house-btn-wrapper {
+    text-align: center;
+}
+
+.house-btn-wrapper {
+    text-align: center;
+}
+
+.house-btn {
+    width: 20rem;
+    padding: 1.5rem 1rem ;
+    margin:  4rem 0;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: #b85d1c;
+    border:.2rem solid #b85d1c;
+    outline: none;
+    cursor: pointer;
+    /* box-shadow: 0 1.5rem rgba(0,0,0,.2) ; */
+    transition: all .2s;
+}
+
+.house-btn:hover {
+    color: #ddd;
+    background-color: #b85d1c;
+}
+
+
